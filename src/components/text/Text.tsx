@@ -1,10 +1,10 @@
 import { ElementType, ReactNode } from 'react';
-import { clsx } from 'clsx';
+import clsx from 'clsx';
 import { FontFamiliesClasses } from 'src/constants/articleProps';
 
 import styles from './index.module.scss';
 
-type TextProps = {
+type Text = {
 	/** Сам текст для вывода */
 	children: ReactNode;
 	/** Тэг которым отрендерить текст */
@@ -38,7 +38,7 @@ export const Text = ({
 	align = 'left',
 	family = 'open-sans',
 	dynamicLite = false,
-}: TextProps) => {
+}: Text) => {
 	const className = clsx(
 		styles.text,
 		styles[`size${size}`],

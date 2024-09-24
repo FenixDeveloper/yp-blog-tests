@@ -1,6 +1,6 @@
 {
 	"extends": [
-		"stylelint-config-standard-scss"
+		"stylelint-config-standard"
 	],
 	"plugins": [
 		"stylelint-order"
@@ -12,12 +12,6 @@
 		"function-linear-gradient-no-nonstandard-direction": true,
 		"string-no-newline": true,
 		"unit-no-unknown": true,
-		"no-descending-specificity": [
-			true,
-			{
-				"ignore": ["selectors-within-list"]
-			}
-		],
 		"property-no-unknown": [
 			true,
 			{
@@ -32,7 +26,7 @@
 		"selector-pseudo-element-no-unknown": true,
 		"selector-type-no-unknown": true,
 		"media-feature-name-no-unknown": true,
-		"scss/at-rule-no-unknown": true,
+		"at-rule-no-unknown": true,
 		"comment-no-empty": true,
 		"no-empty-source": true,
 		"no-invalid-double-slash-comments": true,
