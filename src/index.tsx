@@ -1,5 +1,5 @@
 import { createRoot } from 'react-dom/client';
-import { StrictMode, CSSProperties } from 'react';
+import { StrictMode, useState, CSSProperties } from 'react';
 import clsx from 'clsx';
 
 import { Article } from './components/article/Article';
@@ -15,7 +15,7 @@ const root = createRoot(domNode);
 const App = () => {
 	const [currentArticleState, setCurrentArticleState] =
 		useState(defaultArticleState);
-	
+
 	return (
 		<div
 			className={clsx(styles.main)}
@@ -28,9 +28,9 @@ const App = () => {
 					'--bg-color': currentArticleState.backgroundColor.value,
 				} as CSSProperties
 			}>
-			<ArticleParamsForm 
+			<ArticleParamsForm
 				currentArticleState={currentArticleState}
-				setCurrentArticleState={setCurrentArticleState}	
+				setCurrentArticleState={setCurrentArticleState}
 			/>
 			<Article />
 		</div>
